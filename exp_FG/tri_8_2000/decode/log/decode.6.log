@@ -1,0 +1,30 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp_FG/tri_8_2000/graph/words.txt exp_FG/tri_8_2000/final.mdl exp_FG/tri_8_2000/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split18/6/utt2spk scp:data/test/split18/6/cmvn.scp scp:data/test/split18/6/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp_FG/tri_8_2000/decode/lat.6.gz" 
+# Started at Sun Apr  1 16:33:26 CST 2018
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp_FG/tri_8_2000/graph/words.txt exp_FG/tri_8_2000/final.mdl exp_FG/tri_8_2000/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split18/6/utt2spk scp:data/test/split18/6/cmvn.scp scp:data/test/split18/6/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp_FG/tri_8_2000/decode/lat.6.gz' 
+apply-cmvn --utt2spk=ark:data/test/split18/6/utt2spk scp:data/test/split18/6/cmvn.scp scp:data/test/split18/6/feats.scp ark:- 
+add-deltas ark:- ark:- 
+zh1106M0001 要 五 箱 银桥 牛奶 多 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0001 is -59.3118 over 343 frames.
+LOG (apply-cmvn[5.3.76~1-26df3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 9 utterances, errors on 0
+zh1106M0002 要 三 箱 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0002 is -56.5864 over 381 frames.
+zh1106M0003 要 要 五 箱 银桥 牛奶 多 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0003 is -58.2153 over 362 frames.
+zh1106M0004 要 要 三 箱 银桥 牛奶 多 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0004 is -56.6817 over 410 frames.
+zh1106M0005 要 要 三 箱 银桥 牛奶 多 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0005 is -58.8803 over 372 frames.
+zh1106M0006 要 三 箱 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0006 is -36.4122 over 180 frames.
+zh1106M0007 关闭 不 阀门 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0007 is -43.6566 over 209 frames.
+zh1106M0008 开启 箱 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0008 is -49.1187 over 199 frames.
+zh1106M0009 要 三 箱 加糖 
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance zh1106M0009 is -37.6186 over 180 frames.
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:main():gmm-latgen-faster.cc:176) Time taken 3.48819s: real-time factor assuming 100 frames/sec is 0.132329
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:main():gmm-latgen-faster.cc:179) Done 9 utterances, failed for 0
+LOG (gmm-latgen-faster[5.3.76~1-26df3]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -53.2415 over 2636 frames.
+# Accounting: time=3 threads=1
+# Ended (code 0) at Sun Apr  1 16:33:29 CST 2018, elapsed time 3 seconds
